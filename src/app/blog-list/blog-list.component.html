@@ -1,0 +1,8 @@
+<a href="#" (click)="expanedAll()">Expaned all</a>
+<app-blog-post-tile 
+#tile
+*ngFor="let p of posts[currentPage]" 
+[post]="p">
+</app-blog-post-tile>
+
+<app-paginator [NbOfpages]="posts.length" (pageNumberEvent)="updatePage($event)"></app-paginator>
